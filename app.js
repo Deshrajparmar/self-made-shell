@@ -9,5 +9,13 @@ const rl = readline.createInterface({
 rl.prompt();
 
 rl.on("line",(input) =>{
-    
+  input = input.trim();
+  
+  if(input == "exit"){
+    rl.close();
+    return;
+  }
+  console.log(input);
+
+  rl.prompt();
 })
