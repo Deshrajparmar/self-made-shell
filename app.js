@@ -18,4 +18,13 @@ rl.on("line",(input) =>{
   console.log(input);
 
   rl.prompt();
+ if(input.startsWith("echo")){
+    console.log(input.slice(5));
+    rl.prompt();
+    return;
+ }   
+
+
+
+
 })
